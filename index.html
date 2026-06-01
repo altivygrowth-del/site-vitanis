@@ -365,6 +365,9 @@
   .esp-item::before {
     content: '◆'; color: var(--gold); font-size: 0.5rem; margin-top: 3px; flex-shrink: 0;
   }
+  .esp-item:last-child {
+    grid-column: 1 / -1;
+  }
 
   /* ─── DEPOIMENTOS ────────────────────────────────── */
   #depoimentos { padding: 110px 0; background: var(--ink); }
