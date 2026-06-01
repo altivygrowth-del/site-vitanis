@@ -430,8 +430,8 @@
     animation-play-state: paused;
   }
   .dep-image-card {
-    width: 260px;
-    height: 360px;
+    width: 420px;
+    height: 520px;
     flex: 0 0 auto;
     border-radius: var(--radius);
     overflow: hidden;
@@ -442,8 +442,9 @@
   .dep-image-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    background: #111;
   }
   @keyframes depCarousel {
     from { transform: translateX(0); }
@@ -636,7 +637,7 @@
     .sobre-img-wrap { max-width: 360px; }
     .dep-grid { grid-template-columns: 1fr; }
 
-    .dep-image-card { width: 220px; height: 310px; }
+    .dep-image-card { width: 280px; height: 380px; }
     .dep-image-carousel::before,
     .dep-image-carousel::after { width: 45px; }
     .form-grid { grid-template-columns: 1fr; }
@@ -873,16 +874,6 @@
         <div class="dep-info">
           <div class="dep-name">Tailline</div>
           <div class="dep-role">Paciente - Relato sobre Gravidez</div>
-        </div>
-      </div>
-      <div class="dep-card reveal reveal-delay-2">
-        <div class="dep-video-wrap">
-          <iframe
-            src="https://youtu.be/5r59FTnERFA" title="Depoimento 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="dep-info">
-          <div class="dep-name">Patricia Rangel</div>
-          <div class="dep-role">Mestre Reiki</div>
         </div>
       </div>
       <div class="dep-card reveal reveal-delay-3">
