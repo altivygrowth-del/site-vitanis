@@ -114,7 +114,7 @@
     background:
       radial-gradient(ellipse 70% 60% at 70% 50%, rgba(184,154,94,0.08) 0%, transparent 70%),
       radial-gradient(ellipse 50% 80% at 20% 80%, rgba(13,17,23,0.9) 0%, transparent 80%),
-      url('https://institutosaulodepaula.com/wp-content/uploads/2024/05/saulo-hipno-icone-SD.png') center/cover no-repeat;
+      url('imagens/logo.fundo.jpeg') center/cover no-repeat;
     filter: brightness(0.35) saturate(0.6);
   }
   .hero-overlay {
@@ -394,6 +394,63 @@
   }
   .dep-role { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.1em; margin-top: 4px; }
 
+  .dep-image-carousel {
+    margin-top: 58px;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 26px 0;
+  }
+  .dep-image-carousel::before,
+  .dep-image-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 90px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .dep-image-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, var(--ink), transparent);
+  }
+  .dep-image-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, var(--ink), transparent);
+  }
+  .dep-image-track {
+    display: flex;
+    gap: 18px;
+    width: max-content;
+    animation: depCarousel 38s linear infinite;
+  }
+  .dep-image-carousel:hover .dep-image-track {
+    animation-play-state: paused;
+  }
+  .dep-image-card {
+    width: 260px;
+    height: 360px;
+    flex: 0 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+  }
+  .dep-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @keyframes depCarousel {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50% - 9px)); }
+  }
+
+
   /* ─── FORMAÇÕES ──────────────────────────────────── */
   #formacoes { padding: 110px 0; }
   .form-header { margin-bottom: 60px; }
@@ -578,6 +635,10 @@
     .sobre-grid { grid-template-columns: 1fr; }
     .sobre-img-wrap { max-width: 360px; }
     .dep-grid { grid-template-columns: 1fr; }
+
+    .dep-image-card { width: 220px; height: 310px; }
+    .dep-image-carousel::before,
+    .dep-image-carousel::after { width: 45px; }
     .form-grid { grid-template-columns: 1fr; }
     .blog-grid { grid-template-columns: 1fr; }
     .contato-grid { grid-template-columns: 1fr; }
@@ -807,44 +868,128 @@
       <div class="dep-card reveal reveal-delay-1">
         <div class="dep-video-wrap">
           <iframe
-            src="https://www.youtube.com/embed/3dntsaTBz6Q?si=vFnZKLcPNma0r-F0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/oHg83dnJPPg" title="Depoimento 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="dep-info">
-          <div class="dep-name">Margarete</div>
-          <div class="dep-role">Terapeuta</div>
+          <div class="dep-name">Depoimento 1</div>
+          <div class="dep-role">Paciente</div>
         </div>
       </div>
       <div class="dep-card reveal reveal-delay-2">
         <div class="dep-video-wrap">
           <iframe
-            src="https://www.youtube.com/embed/q9N0i_wjBp4?si=6NaEDVndIidODdYn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/OcmROdiSSwU" title="Depoimento 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="dep-info">
-          <div class="dep-name">Regina Celine</div>
-          <div class="dep-role">Massoterapeuta</div>
+          <div class="dep-name">Depoimento 2</div>
+          <div class="dep-role">Paciente</div>
         </div>
       </div>
       <div class="dep-card reveal reveal-delay-3">
         <div class="dep-video-wrap">
           <iframe
-            src="https://www.youtube.com/embed/Mbbn_XqIDms?si=MuXppKMO41t41esM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/1DXw-uStd5I" title="Depoimento 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="dep-info">
-          <div class="dep-name">Sílvia Gimenes</div>
-          <div class="dep-role">Terapeuta</div>
+          <div class="dep-name">Depoimento 3</div>
+          <div class="dep-role">Paciente</div>
         </div>
       </div>
       <div class="dep-card reveal reveal-delay-4">
         <div class="dep-video-wrap">
           <iframe
-           src="https://www.youtube.com/embed/qIksOoc2pJ8?si=1sqRwJE7aoVjiaeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/441uYpvo8Fk" title="Depoimento 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="dep-info">
-          <div class="dep-name">Atanuita Rangel</div>
-          <div class="dep-role">Psicóloga</div>
+          <div class="dep-name">Depoimento 4</div>
+          <div class="dep-role">Paciente</div>
+        </div>
+      </div>
+      <div class="dep-card reveal reveal-delay-1">
+        <div class="dep-video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/sqbkYYfzpuo" title="Depoimento 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="dep-info">
+          <div class="dep-name">Depoimento 5</div>
+          <div class="dep-role">Paciente</div>
+        </div>
+      </div>
+      <div class="dep-card reveal reveal-delay-2">
+        <div class="dep-video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/qIksOoc2pJ8" title="Depoimento 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="dep-info">
+          <div class="dep-name">Depoimento 6</div>
+          <div class="dep-role">Paciente</div>
+        </div>
+      </div>
+      <div class="dep-card reveal reveal-delay-3">
+        <div class="dep-video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/q9N0i_wjBp4" title="Depoimento 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="dep-info">
+          <div class="dep-name">Depoimento 7</div>
+          <div class="dep-role">Paciente</div>
         </div>
       </div>
     </div>
+
+    <div class="dep-image-carousel reveal">
+      <div class="dep-image-track">
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (1).jpeg" alt="Depoimento em imagem 1">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (2).jpeg" alt="Depoimento em imagem 2">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (3).jpeg" alt="Depoimento em imagem 3">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (4).jpeg" alt="Depoimento em imagem 4">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (5).jpeg" alt="Depoimento em imagem 5">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (6).jpeg" alt="Depoimento em imagem 6">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (7).jpeg" alt="Depoimento em imagem 7">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (8).jpeg" alt="Depoimento em imagem 8">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (1).jpeg" alt="Depoimento em imagem 1">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (2).jpeg" alt="Depoimento em imagem 2">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (3).jpeg" alt="Depoimento em imagem 3">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (4).jpeg" alt="Depoimento em imagem 4">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (5).jpeg" alt="Depoimento em imagem 5">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (6).jpeg" alt="Depoimento em imagem 6">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (7).jpeg" alt="Depoimento em imagem 7">
+        </div>
+        <div class="dep-image-card">
+          <img src="imagens/depoimento (8).jpeg" alt="Depoimento em imagem 8">
+        </div>
+      </div>
+    </div>
+
     <p style="text-align:center; margin-top: 32px; font-size: 0.8rem; color: var(--muted);">
       ▶ Para assistir os vídeos de depoimentos, acesse o canal do YouTube: 
       <a href="https://www.youtube.com/@saulohipnoterapeuta" target="_blank" style="color: var(--gold); text-decoration: none;">@saulohipnoterapeuta</a>
